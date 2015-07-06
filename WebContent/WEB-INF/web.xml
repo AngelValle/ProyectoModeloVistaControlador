@@ -25,5 +25,23 @@
 	  <url-pattern>/ServletLeerEmpleado</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+      <servlet-name>Servlet2</servlet-name>
+      <servlet-class>servlet.ServletLeerEmpleadosPorDepartamento</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>Servlet2</servlet-name>
+	  <url-pattern>/ServletLeerEmpleadosPorDepartamento</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>Servlet3</servlet-name>
+      <servlet-class>servlet.ServletDepartment2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>Servlet3</servlet-name>
+	  <url-pattern>/ServletDepartment2</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>

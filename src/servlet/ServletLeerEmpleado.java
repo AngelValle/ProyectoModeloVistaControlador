@@ -24,9 +24,13 @@ public class ServletLeerEmpleado extends HttpServlet{
 		es.setO_dao(empleadoaleer);
 		
 		Employees empleadoleido = (Employees)es.leerEmpleadoService(id_employee);
+		if(null==empleadoleido)
+		{
+			req.getRequestDispatcher("salida.jsp").include(req, resp);
+		}
 
 		req.setAttribute("empleadoleido", empleadoleido);
-		req.getRequestDispatcher("salida.jsp").forward(req, resp);
+		req.getRequestDispatcher("salidaempleado.jsp").forward(req, resp);
 	}
 	
 	
