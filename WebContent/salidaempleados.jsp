@@ -26,7 +26,7 @@
 	 		out.println("</table>");
 	 		out.println("<br>");
 	 	}
-	 	out.println("<table align=\"right\" bordercolor=\"BLACK\" bgcolor=\"#FFFFFF\"><tr><td><a href=\"index.html\">Inicio</a></td></tr></table>");
+	 	out.println("<table align=\"right\" bordercolor=\"BLACK\" bgcolor=\"#FFFFFF\"><tr><td><a href=\"index.jsp\">Inicio</a></td></tr></table>");
  		%>
 <!--  		<h1>Lista Empleados:</h1> -->
 <%-- 		<jsp:useBean id="empleadosleido" type="java.util.List" scope="request"/> --%>

@@ -14,7 +14,7 @@ import servicios.DepartmentsServices;
 import clases.Departments;
 
 public class ServletDepartment2 extends HttpServlet{
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
@@ -44,11 +44,9 @@ public class ServletDepartment2 extends HttpServlet{
 									"</form>"+
 								"</td>"+
 							"</tr>"+
-						"</table>"+
+						"</table>");
 						
-						"<table align=\"right\" bordercolor=\"BLACK\" bgcolor=\"#FFFFFF\">"+
-							"<tr><td><a href=\"index.html\">Inicio</a></td></tr>"+
-						"</table><br><br><br>");
+			req.getRequestDispatcher("index.jsp").include(req, resp);
 	}		
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 

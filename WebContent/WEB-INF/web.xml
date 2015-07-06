@@ -43,5 +43,4 @@
 	  <url-pattern>/ServletDepartment2</url-pattern>
   </servlet-mapping>
   
-  
 </web-app>
