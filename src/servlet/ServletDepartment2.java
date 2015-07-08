@@ -18,35 +18,35 @@ public class ServletDepartment2 extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
 	{
-			List<Departments> list_departamentos = null;
-			DepartmentsServices departmentsservices = new DepartmentsServices();
-			
-			list_departamentos = departmentsservices.listaDepartamentosConTrabajadores();
-			Iterator<Departments> it_departamentos = list_departamentos.iterator();
-			
-			resp.setContentType("text/html; charset=UTF-8");
-			PrintWriter out = resp.getWriter();
-			
-			
-			out.println("<h1>LEER EMPLEADOS POR DEPARTAMENTO</h1>"+
-						"<table>"+
-							"<tr>"+
-								"<td>"+
-									"<form action=\"ServletLeerEmpleadosPorDepartamento\" method=\"get\">"+
-										"<p>ID Departamento: <select name=\"iddepartamento\">");
-			
-			while(it_departamentos.hasNext())
-			{
-				Departments departamento = (Departments)it_departamentos.next();
-				out.println("<option value=\""+departamento.getDepartmentId()+"\">"+departamento.getDepartmentName()+"</option>");
-			}
-			out.println("</select><input type=\"submit\" value=\"Enviar\"></p>"+
-									"</form>"+
-								"</td>"+
-							"</tr>"+
-						"</table>");
-						
-			req.getRequestDispatcher("index.jsp").include(req, resp);
+		List<Departments> list_departamentos = null;
+		DepartmentsServices departmentsservices = new DepartmentsServices();
+		
+		list_departamentos = departmentsservices.listaDepartamentosConTrabajadores();
+		Iterator<Departments> it_departamentos = list_departamentos.iterator();
+		
+		resp.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = resp.getWriter();
+		
+		
+		out.println("<h1>LEER EMPLEADOS POR DEPARTAMENTO</h1>"+
+					"<table>"+
+						"<tr>"+
+							"<td>"+
+								"<form action=\"ServletLeerEmpleadosPorDepartamento\" method=\"get\">"+
+									"<p>ID Departamento: <select name=\"iddepartamento\">");
+		
+		while(it_departamentos.hasNext())
+		{
+			Departments departamento = (Departments)it_departamentos.next();
+			out.println("<option value=\""+departamento.getDepartmentId()+"\">"+departamento.getDepartmentName()+"</option>");
+		}
+		out.println("</select><input type=\"submit\" value=\"Enviar\"></p>"+
+								"</form>"+
+							"</td>"+
+						"</tr>"+
+					"</table>");
+					
+		req.getRequestDispatcher("index.jsp").include(req, resp);
 	}		
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 

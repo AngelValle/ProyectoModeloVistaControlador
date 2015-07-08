@@ -15,7 +15,7 @@
 			<input type="text" name="idempleado">
 			<input type="submit" value="Solicitar">
 		</form>
-		<br>
+		<hr>
 		<h1>LEER EMPLEADOS POR DEPARTAMENTO</h1>
 		<form action="ServletDepartment2" method="get">
 			<input type="submit" value="Actualizar">
